@@ -1334,6 +1334,7 @@ ETF_UNIVERSE = {
     # Consumer sub-sectors
     "XRT":  ("Retail",                "Consumer"),
     "PEJ":  ("Hotels/Restaurants",    "Consumer"),
+    "AWAY": ("Travel Tech",           "Consumer"),
     "IBUY": ("E-Commerce",            "Consumer"),
     "BETZ": ("Sports Betting",        "Consumer"),
     # Utilities sub-sectors
