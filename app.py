@@ -1298,6 +1298,7 @@ ETF_UNIVERSE = {
     "BOTZ": ("Robotics & AI",         "Technology"),
     "FDN":  ("Internet",              "Technology"),
     "AIQ":  ("AI & Big Data",         "Technology"),
+    "DTCR": ("Data Centers",          "Technology"),
     # Health Care sub-sectors
     "XBI":  ("Biotech",               "Health Care"),
     "IBB":  ("Biotech Large Cap",     "Health Care"),
