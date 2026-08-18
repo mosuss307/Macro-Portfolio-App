@@ -13,7 +13,13 @@ import warnings
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import rotation_engine
-from data import get_etf_holdings
+from data import get_etf_holdings as _get_etf_holdings
+
+# Cache holdings for 6 hours — ETF holdings change rarely and Yahoo Finance
+# rate-limits Streamlit Cloud's shared IP if we hit it on every page load.
+@st.cache_data(ttl=6 * 3600, show_spinner=False)
+def get_etf_holdings(ticker: str):
+    return _get_etf_holdings(ticker)
 warnings.filterwarnings("ignore")
 
 # ──────────────────────────────────────────────────────────────────
