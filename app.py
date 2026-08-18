@@ -1356,7 +1356,7 @@ st.sidebar.markdown(
     unsafe_allow_html=True,
 )
 st.sidebar.markdown("---")
-page = st.sidebar.radio("View", ["📊  ETF Scan", "🔍  Ticker Analyzer", "🔁  Sector Rotation", "📋  Portfolio Framework"])
+page = st.sidebar.radio("View", ["📊  ETF Scan", "🔍  Ticker Analyzer", "🔁  Sector Rotation", "📋  Portfolio Framework", "🏦  Holdings"])
 st.sidebar.markdown("---")
 st.sidebar.caption("ETF Scan scores 40 sector ETFs. Ticker Analyzer deep-dives any symbol. Sector Rotation classifies ~40 sub-sectors into long/short tiers.")
 
@@ -2029,3 +2029,69 @@ elif page == "📋  Portfolio Framework":
         {"Ticker": "—",    "Theme": "Cash / Buffer",   "Bucket": "Cash",     "Weight": "3%",  "Add When": "When <10 positions qualify",         "Reduce When": "Deploy when signals improve"},
     ])
     st.dataframe(port_df, use_container_width=True, hide_index=True)
+
+
+# ──────────────────────────────────────────────────────────────────
+# PAGE: HOLDINGS
+# ──────────────────────────────────────────────────────────────────
+elif page == "🏦  Holdings":
+    st.markdown(
+        '<div style="margin-bottom:4px">'
+        '<span style="font-family:Georgia,serif; font-size:1.5rem; font-weight:700; '
+        'color:#E8E2CC">ETF Holdings Lookup</span></div>'
+        '<p style="color:#8A8470; font-size:0.80rem; margin-bottom:18px; margin-top:2px">'
+        'Select any ETF in the universe to see its top holdings.</p>',
+        unsafe_allow_html=True,
+    )
+
+    # Build a sorted list of options: "TICKER — Name (Category)"
+    etf_options = sorted(
+        [f"{ticker} — {name}  [{cat}]" for ticker, (name, cat) in ETF_UNIVERSE.items()]
+    )
+    selected = st.selectbox("Choose an ETF", etf_options)
+
+    if selected:
+        ticker = selected.split(" — ")[0].strip()
+        name, category = ETF_UNIVERSE.get(ticker, ("", ""))
+
+        col_ticker, col_fetch = st.columns([3, 1])
+        with col_fetch:
+            fetch = st.button("Get Holdings", type="primary")
+
+        if fetch or st.session_state.get("holdings_ticker") == ticker:
+            if fetch:
+                st.session_state["holdings_ticker"] = ticker
+                st.session_state["holdings_data"]   = None  # clear old data
+
+            with st.spinner(f"Fetching holdings for {ticker} …"):
+                holdings = get_etf_holdings(ticker)
+                st.session_state["holdings_data"] = holdings
+
+            if holdings is not None and not holdings.empty:
+                df_h = holdings.copy()
+                weight_col = next(
+                    (c for c in df_h.columns if "percent" in c.lower() or "weight" in c.lower()),
+                    None,
+                )
+                # Build a clean display table with symbol, name, and weight %
+                if weight_col:
+                    df_h = df_h.copy()
+                    df_h["Weight %"] = df_h[weight_col].apply(lambda x: f"{float(x)*100:.2f}%")
+                    display_cols = [c for c in df_h.columns if c != weight_col]
+                    df_h = df_h[display_cols]
+
+                st.markdown(
+                    f'<div style="font-family:Georgia,serif; font-size:1.0rem; '
+                    f'font-weight:700; color:#D4C898; margin:16px 0 8px 0">'
+                    f'Top Holdings — {ticker}  '
+                    f'<span style="font-size:0.72rem; color:#8A8470; font-weight:normal">'
+                    f'{name} &middot; {category}</span></div>',
+                    unsafe_allow_html=True,
+                )
+                st.dataframe(df_h, use_container_width=True)
+            else:
+                st.warning(
+                    f"Holdings data is not available for {ticker}. "
+                    "Yahoo Finance may not provide holdings for this ETF, "
+                    "or the request was blocked. Try again or switch to a different ETF."
+                )
