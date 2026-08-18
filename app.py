@@ -13,13 +13,7 @@ import warnings
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import rotation_engine
-from data import get_etf_holdings as _get_etf_holdings
-
-# Cache holdings for 6 hours — ETF holdings change rarely and Yahoo Finance
-# rate-limits Streamlit Cloud's shared IP if we hit it on every page load.
-@st.cache_data(ttl=6 * 3600, show_spinner=False)
-def get_etf_holdings(ticker: str):
-    return _get_etf_holdings(ticker)
+from data import get_etf_holdings
 warnings.filterwarnings("ignore")
 
 # ──────────────────────────────────────────────────────────────────
@@ -2064,14 +2058,24 @@ elif page == "🏦  Holdings":
         with col_fetch:
             fetch = st.button("Get Holdings", type="primary")
 
-        if fetch or st.session_state.get("holdings_ticker") == ticker:
-            if fetch:
-                st.session_state["holdings_ticker"] = ticker
-                st.session_state["holdings_data"]   = None  # clear old data
+        # Use session state to cache only successful results (never cache failures)
+        cache_key = f"holdings_data_{ticker}"
 
-            with st.spinner(f"Fetching holdings for {ticker} …"):
-                holdings = get_etf_holdings(ticker)
-                st.session_state["holdings_data"] = holdings
+        if fetch:
+            # Clear any previously cached result for this ticker so we re-fetch
+            st.session_state.pop(cache_key, None)
+
+        if fetch or cache_key in st.session_state:
+            # Use cached result if available, otherwise fetch now
+            if cache_key not in st.session_state:
+                with st.spinner(f"Fetching holdings for {ticker} …"):
+                    holdings = get_etf_holdings(ticker)
+                if holdings is not None and not holdings.empty:
+                    st.session_state[cache_key] = holdings
+            else:
+                holdings = st.session_state[cache_key]
+
+            holdings = st.session_state.get(cache_key)
 
             if holdings is not None and not holdings.empty:
                 df_h = holdings.copy()
@@ -2079,7 +2083,6 @@ elif page == "🏦  Holdings":
                     (c for c in df_h.columns if "percent" in c.lower() or "weight" in c.lower()),
                     None,
                 )
-                # Build a clean display table with symbol, name, and weight %
                 if weight_col:
                     df_h = df_h.copy()
                     df_h["Weight %"] = df_h[weight_col].apply(lambda x: f"{float(x)*100:.2f}%")
@@ -2096,11 +2099,11 @@ elif page == "🏦  Holdings":
                 )
                 st.dataframe(df_h, use_container_width=True)
             else:
-                err = getattr(get_etf_holdings, "last_error", None)
+                err = get_etf_holdings.last_error
                 if err:
-                    st.error(f"Holdings fetch failed for {ticker}:\n\n`{err}`")
+                    st.error(f"Could not load holdings for {ticker}: {err}")
                 else:
-                    st.warning(
-                        f"Holdings data is not available for {ticker}. "
-                        "Yahoo Finance may not provide holdings for this ETF."
-                    )
+                    st.warning(f"Yahoo Finance returned no holdings data for {ticker}.")
+                if st.button("Try Again", key="holdings_retry"):
+                    st.session_state.pop(cache_key, None)
+                    st.rerun()
