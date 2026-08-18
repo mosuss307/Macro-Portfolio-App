@@ -69,5 +69,10 @@ def get_etf_holdings(ticker: str):
         df.index.name = "Symbol"
         return df if not df.empty else None
 
-    except Exception:
+    except Exception as e:
+        # Store error so the UI can display it for debugging
+        get_etf_holdings.last_error = str(e)
         return None
+
+
+get_etf_holdings.last_error = None

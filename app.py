@@ -2090,8 +2090,11 @@ elif page == "🏦  Holdings":
                 )
                 st.dataframe(df_h, use_container_width=True)
             else:
-                st.warning(
-                    f"Holdings data is not available for {ticker}. "
-                    "Yahoo Finance may not provide holdings for this ETF, "
-                    "or the request was blocked. Try again or switch to a different ETF."
-                )
+                err = getattr(get_etf_holdings, "last_error", None)
+                if err:
+                    st.error(f"Holdings fetch failed for {ticker}:\n\n`{err}`")
+                else:
+                    st.warning(
+                        f"Holdings data is not available for {ticker}. "
+                        "Yahoo Finance may not provide holdings for this ETF."
+                    )
