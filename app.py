@@ -2058,24 +2058,8 @@ elif page == "🏦  Holdings":
         with col_fetch:
             fetch = st.button("Get Holdings", type="primary")
 
-        # Use session state to cache only successful results (never cache failures)
-        cache_key = f"holdings_data_{ticker}"
-
         if fetch:
-            # Clear any previously cached result for this ticker so we re-fetch
-            st.session_state.pop(cache_key, None)
-
-        if fetch or cache_key in st.session_state:
-            # Use cached result if available, otherwise fetch now
-            if cache_key not in st.session_state:
-                with st.spinner(f"Fetching holdings for {ticker} …"):
-                    holdings = get_etf_holdings(ticker)
-                if holdings is not None and not holdings.empty:
-                    st.session_state[cache_key] = holdings
-            else:
-                holdings = st.session_state[cache_key]
-
-            holdings = st.session_state.get(cache_key)
+            holdings = get_etf_holdings(ticker)
 
             if holdings is not None and not holdings.empty:
                 df_h = holdings.copy()
@@ -2099,11 +2083,4 @@ elif page == "🏦  Holdings":
                 )
                 st.dataframe(df_h, use_container_width=True)
             else:
-                err = get_etf_holdings.last_error
-                if err:
-                    st.error(f"Could not load holdings for {ticker}: {err}")
-                else:
-                    st.warning(f"Yahoo Finance returned no holdings data for {ticker}.")
-                if st.button("Try Again", key="holdings_retry"):
-                    st.session_state.pop(cache_key, None)
-                    st.rerun()
+                st.warning(f"No holdings data found for {ticker}.")

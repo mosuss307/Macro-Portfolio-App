@@ -1,0 +1,2176 @@
+{
+  "XLK": {
+    "symbols": [
+      "NVDA",
+      "AAPL",
+      "MSFT",
+      "AVGO",
+      "AMD",
+      "MU",
+      "CSCO",
+      "INTC",
+      "AMAT",
+      "LRCX"
+    ],
+    "names": [
+      "NVIDIA Corp",
+      "Apple Inc",
+      "Microsoft Corp",
+      "Broadcom Inc",
+      "Advanced Micro Devices Inc",
+      "Micron Technology Inc",
+      "Cisco Systems Inc",
+      "Intel Corp",
+      "Applied Materials Inc",
+      "Lam Research Corp"
+    ],
+    "weights": [
+      0.1379317,
+      0.1287065,
+      0.097929694,
+      0.052285,
+      0.0419662,
+      0.0362575,
+      0.0317331,
+      0.029516399,
+      0.0279055,
+      0.0253812
+    ]
+  },
+  "XLF": {
+    "symbols": [
+      "JPM",
+      "BRK-B",
+      "V",
+      "MA",
+      "BAC",
+      "GS",
+      "WFC",
+      "MS",
+      "C",
+      "AXP"
+    ],
+    "names": [
+      "JPMorgan Chase & Co",
+      "Berkshire Hathaway Inc Class B",
+      "Visa Inc Class A",
+      "Mastercard Inc Class A",
+      "Bank of America Corp",
+      "The Goldman Sachs Group Inc",
+      "Wells Fargo & Co",
+      "Morgan Stanley",
+      "Citigroup Inc",
+      "American Express Co"
+    ],
+    "weights": [
+      0.1171245,
+      0.1165271,
+      0.0755037,
+      0.0574568,
+      0.0502556,
+      0.037332103,
+      0.032871,
+      0.0313414,
+      0.0280685,
+      0.0222367
+    ]
+  },
+  "XLV": {
+    "symbols": [
+      "LLY",
+      "JNJ",
+      "ABBV",
+      "UNH",
+      "MRK",
+      "TMO",
+      "AMGN",
+      "ABT",
+      "GILD",
+      "PFE"
+    ],
+    "names": [
+      "Eli Lilly and Co",
+      "Johnson & Johnson",
+      "AbbVie Inc",
+      "UnitedHealth Group Inc",
+      "Merck & Co Inc",
+      "Thermo Fisher Scientific Inc",
+      "Amgen Inc",
+      "Abbott Laboratories",
+      "Gilead Sciences Inc",
+      "Pfizer Inc"
+    ],
+    "weights": [
+      0.1547204,
+      0.1050575,
+      0.0754805,
+      0.0640698,
+      0.0547464,
+      0.0363342,
+      0.0353898,
+      0.0313439,
+      0.027523,
+      0.0242675
+    ]
+  },
+  "XLE": {
+    "symbols": [
+      "XOM",
+      "CVX",
+      "COP",
+      "MPC",
+      "PSX",
+      "VLO",
+      "EOG",
+      "SLB",
+      "KMI",
+      "WMB"
+    ],
+    "names": [
+      "ExxonMobil Holdings Corp",
+      "Chevron Corp",
+      "ConocoPhillips",
+      "Marathon Petroleum Corp",
+      "Phillips 66",
+      "Valero Energy Corp",
+      "EOG Resources Inc",
+      "SLB Ltd",
+      "Kinder Morgan Inc Class P",
+      "Williams Companies Inc"
+    ],
+    "weights": [
+      0.20581141,
+      0.1525565,
+      0.0607684,
+      0.049300198,
+      0.0491118,
+      0.047444202,
+      0.0455115,
+      0.043176398,
+      0.0390768,
+      0.0386299
+    ]
+  },
+  "XLI": {
+    "symbols": [
+      "GE",
+      "CAT",
+      "RTX",
+      "GEV",
+      "UNP",
+      "BA",
+      "ETN",
+      "DE",
+      "UBER",
+      "PH"
+    ],
+    "names": [
+      "GE Aerospace",
+      "Caterpillar Inc",
+      "RTX Corp",
+      "GE Vernova Inc",
+      "Union Pacific Corp",
+      "Boeing Co",
+      "Eaton Corp PLC",
+      "Deere & Co",
+      "Uber Technologies Inc",
+      "Parker Hannifin Corp"
+    ],
+    "weights": [
+      0.0672661,
+      0.0671985,
+      0.051897403,
+      0.047648102,
+      0.0310582,
+      0.030510599,
+      0.028870398,
+      0.026660299,
+      0.0256481,
+      0.022049401
+    ]
+  },
+  "XLC": {
+    "symbols": [
+      "META",
+      "GOOGL",
+      "GOOG",
+      "T",
+      "VZ",
+      "EA",
+      "TMUS",
+      "CMCSA",
+      "TTWO",
+      "DIS"
+    ],
+    "names": [
+      "Meta Platforms Inc Class A",
+      "Alphabet Inc Class A",
+      "Alphabet Inc Class C",
+      "AT&T Inc",
+      "Verizon Communications Inc",
+      "Electronic Arts Inc",
+      "T-Mobile US Inc",
+      "Comcast Corp Class A",
+      "Take-Two Interactive Software Inc",
+      "The Walt Disney Co"
+    ],
+    "weights": [
+      0.16557449,
+      0.1097161,
+      0.0885659,
+      0.0478712,
+      0.047687702,
+      0.0459804,
+      0.044601798,
+      0.0444446,
+      0.0441578,
+      0.043815497
+    ]
+  },
+  "XLY": {
+    "symbols": [
+      "AMZN",
+      "TSLA",
+      "HD",
+      "MCD",
+      "TJX",
+      "BKNG",
+      "SBUX",
+      "LOW",
+      "MAR",
+      "ROST"
+    ],
+    "names": [
+      "Amazon.com Inc",
+      "Tesla Inc",
+      "The Home Depot Inc",
+      "McDonald's Corp",
+      "TJX Companies Inc",
+      "Booking Holdings Inc",
+      "Starbucks Corp",
+      "Lowe's Companies Inc",
+      "Marriott International Inc Class A",
+      "Ross Stores Inc"
+    ],
+    "weights": [
+      0.255758,
+      0.1467861,
+      0.0553945,
+      0.0420089,
+      0.041153498,
+      0.0375661,
+      0.030147,
+      0.0292507,
+      0.0205075,
+      0.0203275
+    ]
+  },
+  "XLP": {
+    "symbols": [
+      "WMT",
+      "COST",
+      "KO",
+      "PG",
+      "PM",
+      "CL",
+      "MDLZ",
+      "MNST",
+      "PEP",
+      "MO"
+    ],
+    "names": [
+      "Walmart Inc",
+      "Costco Wholesale Corp",
+      "Coca-Cola Co",
+      "Procter & Gamble Co",
+      "Philip Morris International Inc",
+      "Colgate-Palmolive Co",
+      "Mondelez International Inc Class A",
+      "Monster Beverage Corp",
+      "PepsiCo Inc",
+      "Altria Group Inc"
+    ],
+    "weights": [
+      0.1038535,
+      0.08996411,
+      0.0722532,
+      0.071675904,
+      0.0633559,
+      0.045798898,
+      0.043807,
+      0.0437291,
+      0.0436336,
+      0.0421605
+    ]
+  },
+  "XLU": {
+    "symbols": [
+      "NEE",
+      "SO",
+      "DUK",
+      "CEG",
+      "AEP",
+      "D",
+      "SRE",
+      "ETR",
+      "XEL",
+      "VST"
+    ],
+    "names": [
+      "NextEra Energy Inc",
+      "Southern Co",
+      "Duke Energy Corp",
+      "Constellation Energy Corp",
+      "American Electric Power Co Inc",
+      "Dominion Energy Inc",
+      "Sempra",
+      "Entergy Corp",
+      "Xcel Energy Inc",
+      "Vistra Corp"
+    ],
+    "weights": [
+      0.1303264,
+      0.0766289,
+      0.0703082,
+      0.0603938,
+      0.0500173,
+      0.043738797,
+      0.0416194,
+      0.035431,
+      0.0351006,
+      0.033771202
+    ]
+  },
+  "XLRE": {
+    "symbols": [
+      "WELL",
+      "PLD",
+      "EQIX",
+      "AMT",
+      "SPG",
+      "DLR",
+      "PSA",
+      "VTR",
+      "O",
+      "CBRE"
+    ],
+    "names": [
+      "Welltower Inc",
+      "Prologis Inc",
+      "Equinix Inc",
+      "American Tower Corp",
+      "Simon Property Group Inc",
+      "Digital Realty Trust Inc",
+      "Public Storage",
+      "Ventas Inc",
+      "Realty Income Corp",
+      "CBRE Group Inc Class A"
+    ],
+    "weights": [
+      0.1110737,
+      0.0904913,
+      0.0674716,
+      0.054207902,
+      0.0499219,
+      0.0489187,
+      0.047341198,
+      0.0460051,
+      0.045817498,
+      0.0435018
+    ]
+  },
+  "XLB": {
+    "symbols": [
+      "LIN",
+      "NEM",
+      "FCX",
+      "SHW",
+      "ECL",
+      "APD",
+      "CTVA",
+      "NUE",
+      "VMC",
+      "CRH"
+    ],
+    "names": [
+      "Linde PLC",
+      "Newmont Corp",
+      "Freeport-McMoRan Inc",
+      "Sherwin-Williams Co",
+      "Ecolab Inc",
+      "Air Products and Chemicals Inc",
+      "Corteva Inc",
+      "Nucor Corp",
+      "Vulcan Materials Co",
+      "CRH PLC"
+    ],
+    "weights": [
+      0.1306908,
+      0.059113998,
+      0.0532007,
+      0.0492979,
+      0.0474874,
+      0.0468811,
+      0.0464671,
+      0.045149397,
+      0.0432968,
+      0.0417725
+    ]
+  },
+  "VGT": {
+    "symbols": [
+      "NVDA",
+      "AAPL",
+      "MSFT",
+      "MU",
+      "AVGO",
+      "AMD",
+      "INTC",
+      "AMAT",
+      "LRCX",
+      "CSCO"
+    ],
+    "names": [
+      "NVIDIA Corp",
+      "Apple Inc",
+      "Microsoft Corp",
+      "Micron Technology Inc",
+      "Broadcom Inc",
+      "Advanced Micro Devices Inc",
+      "Intel Corp",
+      "Applied Materials Inc",
+      "Lam Research Corp",
+      "Cisco Systems Inc"
+    ],
+    "weights": [
+      0.1609542,
+      0.1432527,
+      0.0828039,
+      0.050421,
+      0.038423702,
+      0.036467,
+      0.024081599,
+      0.022637501,
+      0.0214311,
+      0.0182365
+    ]
+  },
+  "VNQ": {
+    "symbols": [
+      "VRTPX",
+      "WELL",
+      "PLD",
+      "EQIX",
+      "AMT",
+      "SPG",
+      "DLR",
+      "O",
+      "PSA",
+      "VTR"
+    ],
+    "names": [
+      "Vanguard Real Estate II Index",
+      "Welltower Inc",
+      "Prologis Inc",
+      "Equinix Inc",
+      "American Tower Corp",
+      "Simon Property Group Inc",
+      "Digital Realty Trust Inc",
+      "Realty Income Corp",
+      "Public Storage",
+      "Ventas Inc"
+    ],
+    "weights": [
+      0.1435613,
+      0.083696805,
+      0.0667533,
+      0.0543396,
+      0.0402973,
+      0.038401403,
+      0.0326166,
+      0.0303056,
+      0.0265816,
+      0.0223166
+    ]
+  },
+  "VHT": {
+    "symbols": [
+      "LLY",
+      "JNJ",
+      "ABBV",
+      "UNH",
+      "MRK",
+      "AMGN",
+      "TMO",
+      "ABT",
+      "GILD",
+      "ISRG"
+    ],
+    "names": [
+      "Eli Lilly and Co",
+      "Johnson & Johnson",
+      "AbbVie Inc",
+      "UnitedHealth Group Inc",
+      "Merck & Co Inc",
+      "Amgen Inc",
+      "Thermo Fisher Scientific Inc",
+      "Abbott Laboratories",
+      "Gilead Sciences Inc",
+      "Intuitive Surgical Inc"
+    ],
+    "weights": [
+      0.1416004,
+      0.088681296,
+      0.0654291,
+      0.0554569,
+      0.0467025,
+      0.0286958,
+      0.0273896,
+      0.0232323,
+      0.023052102,
+      0.0207631
+    ]
+  },
+  "SOXX": {
+    "symbols": [
+      "NVDA",
+      "AMD",
+      "AVGO",
+      "MU",
+      "INTC",
+      "AMAT",
+      "TSM",
+      "KLAC",
+      "LRCX",
+      "MRVL"
+    ],
+    "names": [
+      "NVIDIA Corp",
+      "Advanced Micro Devices Inc",
+      "Broadcom Inc",
+      "Micron Technology Inc",
+      "Intel Corp",
+      "Applied Materials Inc",
+      "Taiwan Semiconductor Manufacturing Co Ltd ADR",
+      "KLA Corp",
+      "Lam Research Corp",
+      "Marvell Technology Inc"
+    ],
+    "weights": [
+      0.0868534,
+      0.0842779,
+      0.0795935,
+      0.0774277,
+      0.0519723,
+      0.0515218,
+      0.0458685,
+      0.0434515,
+      0.042062897,
+      0.0417897
+    ]
+  },
+  "SMH": {
+    "symbols": [
+      "NVDA",
+      "TSM",
+      "AVGO",
+      "AMD",
+      "MU",
+      "ASML",
+      "AMAT",
+      "TXN",
+      "ADI",
+      "LRCX"
+    ],
+    "names": [
+      "NVIDIA Corp",
+      "Taiwan Semiconductor Manufacturing Co Ltd ADR",
+      "Broadcom Inc",
+      "Advanced Micro Devices Inc",
+      "Micron Technology Inc",
+      "ASML Holding NV ADR",
+      "Applied Materials Inc",
+      "Texas Instruments Inc",
+      "Analog Devices Inc",
+      "Lam Research Corp"
+    ],
+    "weights": [
+      0.2082777,
+      0.09574351,
+      0.0659583,
+      0.0574075,
+      0.0524723,
+      0.0509517,
+      0.0486165,
+      0.047600098,
+      0.0449666,
+      0.0445432
+    ]
+  },
+  "DRAM": {
+    "symbols": [
+      "005930.KS",
+      "000660.KS",
+      "FGXXX",
+      "STX",
+      "WDC"
+    ],
+    "names": [
+      "Samsung Electronics Co Ltd",
+      "SK hynix Inc",
+      "First American Government Obligs X",
+      "Seagate Technology Holdings PLC",
+      "Western Digital Corp"
+    ],
+    "weights": [
+      0.195515,
+      0.1709224,
+      0.1466261,
+      0.050528698,
+      0.049790803
+    ]
+  },
+  "IGV": {
+    "symbols": [
+      "PANW",
+      "MSFT",
+      "PLTR",
+      "CRWD",
+      "CRM",
+      "ORCL",
+      "NOW",
+      "ADBE",
+      "FTNT",
+      "APP"
+    ],
+    "names": [
+      "Palo Alto Networks Inc",
+      "Microsoft Corp",
+      "Palantir Technologies Inc Ordinary Shares - Class A",
+      "CrowdStrike Holdings Inc Class A",
+      "Salesforce Inc",
+      "Oracle Corp",
+      "ServiceNow Inc",
+      "Adobe Inc",
+      "Fortinet Inc",
+      "AppLovin Corp Ordinary Shares - Class A"
+    ],
+    "weights": [
+      0.096634395,
+      0.0962961,
+      0.0778157,
+      0.0697778,
+      0.0540558,
+      0.053131,
+      0.0415311,
+      0.0366449,
+      0.0365172,
+      0.035007
+    ]
+  },
+  "CIBR": {
+    "symbols": [
+      "PANW",
+      "FTNT",
+      "CRWD",
+      "CSCO",
+      "AVGO",
+      "NET",
+      "OKTA",
+      "ZS",
+      "FFIV",
+      "AKAM"
+    ],
+    "names": [
+      "Palo Alto Networks Inc",
+      "Fortinet Inc",
+      "CrowdStrike Holdings Inc Class A",
+      "Cisco Systems Inc",
+      "Broadcom Inc",
+      "Cloudflare Inc",
+      "Okta Inc Class A",
+      "Zscaler Inc",
+      "F5 Inc",
+      "Akamai Technologies Inc"
+    ],
+    "weights": [
+      0.091558106,
+      0.0885348,
+      0.080260605,
+      0.0746794,
+      0.068746,
+      0.0464023,
+      0.0360738,
+      0.0318763,
+      0.0317449,
+      0.027214602
+    ]
+  },
+  "SKYY": {
+    "symbols": [
+      "NTNX",
+      "ANET",
+      "MSFT",
+      "P",
+      "GOOGL",
+      "AMZN",
+      "MDB",
+      "NET",
+      "DOCN",
+      "IBM"
+    ],
+    "names": [
+      "Nutanix Inc Class A",
+      "Arista Networks Inc",
+      "Microsoft Corp",
+      "Everpure Inc Class A",
+      "Alphabet Inc Class A",
+      "Amazon.com Inc",
+      "MongoDB Inc Class A",
+      "Cloudflare Inc",
+      "DigitalOcean Holdings Inc",
+      "International Business Machines Corp"
+    ],
+    "weights": [
+      0.0428756,
+      0.0404027,
+      0.037746698,
+      0.0355652,
+      0.03305,
+      0.0327828,
+      0.0304889,
+      0.0294327,
+      0.029044298,
+      0.028052298
+    ]
+  },
+  "BOTZ": {
+    "symbols": [
+      "6861.T",
+      "ABBN.SW",
+      "6954.T",
+      "NVDA",
+      "ISRG",
+      "6273.T",
+      "300124.SZ",
+      "6383.T",
+      "CGNX",
+      "AUR"
+    ],
+    "names": [
+      "Keyence Corp",
+      "ABB Ltd",
+      "Fanuc Corp",
+      "NVIDIA Corp",
+      "Intuitive Surgical Inc",
+      "SMC Corp",
+      "Shenzhen Inovance Technology Co Ltd Class A",
+      "Daifuku Co Ltd",
+      "Cognex Corp",
+      "Aurora Innovation Inc Class A"
+    ],
+    "weights": [
+      0.106048,
+      0.09342709,
+      0.091423705,
+      0.0886319,
+      0.0575817,
+      0.046092,
+      0.0423352,
+      0.0323908,
+      0.0245243,
+      0.024010701
+    ]
+  },
+  "FDN": {
+    "symbols": [
+      "AMZN",
+      "META",
+      "CSCO",
+      "BKNG",
+      "GOOGL",
+      "ANET",
+      "CRM",
+      "SNOW",
+      "GOOG",
+      "NFLX"
+    ],
+    "names": [
+      "Amazon.com Inc",
+      "Meta Platforms Inc Class A",
+      "Cisco Systems Inc",
+      "Booking Holdings Inc",
+      "Alphabet Inc Class A",
+      "Arista Networks Inc",
+      "Salesforce Inc",
+      "Snowflake Inc Ordinary Shares",
+      "Alphabet Inc Class C",
+      "Netflix Inc"
+    ],
+    "weights": [
+      0.0973497,
+      0.0928779,
+      0.081558704,
+      0.053257,
+      0.0511975,
+      0.049891,
+      0.046808198,
+      0.041753702,
+      0.0412702,
+      0.039505
+    ]
+  },
+  "AIQ": {
+    "symbols": [
+      "000660.KS",
+      "MU",
+      "AMD",
+      "005930.KS",
+      "CSCO",
+      "INTC",
+      "AAPL",
+      "TSM",
+      "AVGO",
+      "AMZN"
+    ],
+    "names": [
+      "SK hynix Inc",
+      "Micron Technology Inc",
+      "Advanced Micro Devices Inc",
+      "Samsung Electronics Co Ltd",
+      "Cisco Systems Inc",
+      "Intel Corp",
+      "Apple Inc",
+      "Taiwan Semiconductor Manufacturing Co Ltd ADR",
+      "Broadcom Inc",
+      "Amazon.com Inc"
+    ],
+    "weights": [
+      0.0632926,
+      0.055848297,
+      0.0506456,
+      0.047930196,
+      0.0420669,
+      0.0375401,
+      0.0335467,
+      0.0332942,
+      0.0322686,
+      0.0312653
+    ]
+  },
+  "DTCR": {
+    "symbols": [
+      "EQIX",
+      "DLR",
+      "AMT",
+      "CCI",
+      "NXT.AX",
+      "MU",
+      "000660.KS",
+      "MRVL",
+      "AJBU.SI",
+      "AMD"
+    ],
+    "names": [
+      "Equinix Inc",
+      "Digital Realty Trust Inc",
+      "American Tower Corp",
+      "Crown Castle Inc",
+      "Nextdc Ltd",
+      "Micron Technology Inc",
+      "SK hynix Inc",
+      "Marvell Technology Inc",
+      "Keppel DC REIT",
+      "Advanced Micro Devices Inc"
+    ],
+    "weights": [
+      0.13397689,
+      0.124336794,
+      0.102579005,
+      0.067769095,
+      0.0520197,
+      0.0430625,
+      0.0420972,
+      0.0403646,
+      0.0389243,
+      0.0371588
+    ]
+  },
+  "XBI": {
+    "symbols": [
+      "APGE",
+      "ORKA",
+      "DNTH",
+      "ERAS",
+      "TWST",
+      "KYMR",
+      "SYRE",
+      "RVMD",
+      "CGON",
+      "PTGX"
+    ],
+    "names": [
+      "Apogee Therapeutics Inc",
+      "Oruka Therapeutics Inc",
+      "Dianthus Therapeutics Inc",
+      "Erasca Inc",
+      "Twist Bioscience Corp",
+      "Kymera Therapeutics Inc Ordinary Shares",
+      "Spyre Therapeutics Inc",
+      "Revolution Medicines Inc Ordinary Shares",
+      "CG Oncology Inc",
+      "Protagonist Therapeutics Inc"
+    ],
+    "weights": [
+      0.0164657,
+      0.0153101,
+      0.0142102,
+      0.0137885995,
+      0.013721201,
+      0.0134254005,
+      0.013303,
+      0.0132108,
+      0.0131663,
+      0.0131219
+    ]
+  },
+  "IBB": {
+    "symbols": [
+      "AMGN",
+      "VRTX",
+      "GILD",
+      "REGN",
+      "ARGX",
+      "NTRA",
+      "RVMD",
+      "ILMN",
+      "BIIB",
+      "ALNY"
+    ],
+    "names": [
+      "Amgen Inc",
+      "Vertex Pharmaceuticals Inc",
+      "Gilead Sciences Inc",
+      "Regeneron Pharmaceuticals Inc",
+      "argenx SE ADR",
+      "Natera Inc",
+      "Revolution Medicines Inc Ordinary Shares",
+      "Illumina Inc",
+      "Biogen Inc",
+      "Alnylam Pharmaceuticals Inc"
+    ],
+    "weights": [
+      0.0851023,
+      0.0793298,
+      0.0720788,
+      0.0613365,
+      0.035358,
+      0.0291437,
+      0.0284567,
+      0.024668802,
+      0.0236755,
+      0.0217793
+    ]
+  },
+  "IHI": {
+    "symbols": [
+      "ABT",
+      "ISRG",
+      "SYK",
+      "BDX",
+      "DXCM",
+      "MDT",
+      "GEHC",
+      "RMD",
+      "IDXX",
+      "EW"
+    ],
+    "names": [
+      "Abbott Laboratories",
+      "Intuitive Surgical Inc",
+      "Stryker Corp",
+      "Becton Dickinson & Co",
+      "DexCom Inc",
+      "Medtronic PLC",
+      "GE HealthCare Technologies Inc Common Stock",
+      "ResMed Inc",
+      "IDEXX Laboratories Inc",
+      "Edwards Lifesciences Corp"
+    ],
+    "weights": [
+      0.1859195,
+      0.1263666,
+      0.113479406,
+      0.0477259,
+      0.047006696,
+      0.0453156,
+      0.0451683,
+      0.0446751,
+      0.042750902,
+      0.042632397
+    ]
+  },
+  "IHF": {
+    "symbols": [
+      "UNH",
+      "CVS",
+      "ELV",
+      "HCA",
+      "VEEV",
+      "HUM",
+      "CNC",
+      "CI",
+      "DGX",
+      "LH"
+    ],
+    "names": [
+      "UnitedHealth Group Inc",
+      "CVS Health Corp",
+      "Elevance Health Inc",
+      "HCA Healthcare Inc",
+      "Veeva Systems Inc Class A",
+      "Humana Inc",
+      "Centene Corp",
+      "The Cigna Group",
+      "Quest Diagnostics Inc",
+      "Labcorp Holdings Inc"
+    ],
+    "weights": [
+      0.2154118,
+      0.1472964,
+      0.0683275,
+      0.045679796,
+      0.045079798,
+      0.0422913,
+      0.040344,
+      0.039960697,
+      0.0380111,
+      0.0373567
+    ]
+  },
+  "PJP": {
+    "symbols": [
+      "ABT",
+      "ABBV",
+      "AMGN",
+      "JNJ",
+      "MRK",
+      "LLY",
+      "CORT",
+      "GILD",
+      "PFE",
+      "AMRX"
+    ],
+    "names": [
+      "Abbott Laboratories",
+      "AbbVie Inc",
+      "Amgen Inc",
+      "Johnson & Johnson",
+      "Merck & Co Inc",
+      "Eli Lilly and Co",
+      "Corcept Therapeutics Inc",
+      "Gilead Sciences Inc",
+      "Pfizer Inc",
+      "Amneal Pharmaceuticals Inc Ordinary Shares - Class A"
+    ],
+    "weights": [
+      0.056748,
+      0.0547997,
+      0.0533528,
+      0.051816702,
+      0.050598003,
+      0.0502113,
+      0.0496504,
+      0.0453086,
+      0.0450208,
+      0.0374894
+    ]
+  },
+  "ARKG": {
+    "symbols": [
+      "TXG",
+      "TWST",
+      "CRSP",
+      "TEM",
+      "PSNL",
+      "LLY",
+      "ABSI",
+      "ILMN",
+      "GH",
+      "NTRA"
+    ],
+    "names": [
+      "10x Genomics Inc Ordinary Shares - Class A",
+      "Twist Bioscience Corp",
+      "CRISPR Therapeutics AG",
+      "Tempus AI Inc Class A common stock",
+      "Personalis Inc",
+      "Eli Lilly and Co",
+      "Absci Corp",
+      "Illumina Inc",
+      "Guardant Health Inc",
+      "Natera Inc"
+    ],
+    "weights": [
+      0.0950625,
+      0.0745146,
+      0.0644307,
+      0.0641731,
+      0.052378003,
+      0.0509438,
+      0.047072303,
+      0.046480298,
+      0.0435516,
+      0.0404177
+    ]
+  },
+  "KRE": {
+    "symbols": [
+      "CFR",
+      "PNFP",
+      "HOMB",
+      "BPOP",
+      "UMBF",
+      "CFG",
+      "MTB",
+      "ONB",
+      "SSB",
+      "HWC"
+    ],
+    "names": [
+      "Cullen/Frost Bankers Inc",
+      "Pinnacle Financial Partners Inc",
+      "Home BancShares Inc",
+      "Popular Inc",
+      "UMB Financial Corp",
+      "Citizens Financial Group Inc",
+      "M&T Bank Corp",
+      "Old National Bancorp",
+      "SouthState Bank Corp",
+      "Hancock Whitney Corp"
+    ],
+    "weights": [
+      0.014419399,
+      0.0141577,
+      0.0140959,
+      0.0140559,
+      0.0138323,
+      0.0138162,
+      0.0137481,
+      0.0136936,
+      0.0136183,
+      0.013615901
+    ]
+  },
+  "KBE": {
+    "symbols": [
+      "TBBK",
+      "NMIH",
+      "PRK",
+      "NIC",
+      "FBP",
+      "MTG",
+      "WSBC",
+      "CFR",
+      "AX",
+      "CRBG"
+    ],
+    "names": [
+      "The Bancorp Inc",
+      "NMI Holdings Inc",
+      "Park National Corp",
+      "Nicolet Bankshares Inc",
+      "First BanCorp",
+      "MGIC Investment Corp",
+      "Wesbanco Inc",
+      "Cullen/Frost Bankers Inc",
+      "Axos Financial Inc",
+      "Corebridge Financial Inc"
+    ],
+    "weights": [
+      0.0111659,
+      0.0109417,
+      0.010797599,
+      0.010795999,
+      0.0106893005,
+      0.0106852,
+      0.0105826,
+      0.0105321,
+      0.010525,
+      0.010498101
+    ]
+  },
+  "IAI": {
+    "symbols": [
+      "GS",
+      "MS",
+      "SCHW",
+      "ICE",
+      "MCO",
+      "CME",
+      "HOOD",
+      "SPGI",
+      "NDAQ",
+      "MSCI"
+    ],
+    "names": [
+      "The Goldman Sachs Group Inc",
+      "Morgan Stanley",
+      "Charles Schwab Corp",
+      "Intercontinental Exchange Inc",
+      "Moodys Corp",
+      "CME Group Inc Class A",
+      "Robinhood Markets Inc Class A",
+      "S&P Global Inc",
+      "Nasdaq Inc",
+      "MSCI Inc"
+    ],
+    "weights": [
+      0.19510071,
+      0.1638064,
+      0.0925126,
+      0.046848502,
+      0.045766503,
+      0.043770097,
+      0.043223098,
+      0.041656,
+      0.037860602,
+      0.0374794
+    ]
+  },
+  "FINX": {
+    "symbols": [
+      "XYZ",
+      "PYPL",
+      "HOOD",
+      "FISV",
+      "GPN",
+      "COIN",
+      "ADYEN.AS",
+      "INTU",
+      "FIS",
+      "AFRM"
+    ],
+    "names": [
+      "Block Inc Class A",
+      "PayPal Holdings Inc",
+      "Robinhood Markets Inc Class A",
+      "Fiserv Inc",
+      "Global Payments Inc",
+      "Coinbase Global Inc Ordinary Shares - Class A",
+      "Adyen NV",
+      "Intuit Inc",
+      "Fidelity National Information Services Inc",
+      "Affirm Holdings Inc Ordinary Shares - Class A"
+    ],
+    "weights": [
+      0.0725461,
+      0.0722033,
+      0.064523906,
+      0.0508084,
+      0.0429587,
+      0.0427522,
+      0.0420051,
+      0.040531203,
+      0.0399108,
+      0.038097
+    ]
+  },
+  "BIZD": {
+    "symbols": [
+      "ARCC",
+      "OBDC",
+      "MAIN",
+      "BXSL",
+      "HTGC",
+      "GBDC"
+    ],
+    "names": [
+      "Ares Capital Corp",
+      "Blue Owl Capital Corp Ordinary Shares",
+      "Main Street Capital Corp",
+      "Blackstone Secured Lending Fund Ordinary Shares",
+      "Hercules Capital Inc",
+      "Golub Capital BDC Inc"
+    ],
+    "weights": [
+      0.1456465,
+      0.0585469,
+      0.0553465,
+      0.052428797,
+      0.0309632,
+      0.0292651
+    ]
+  },
+  "XOP": {
+    "symbols": [
+      "PBF",
+      "PARR",
+      "DK",
+      "DINO",
+      "VLO",
+      "MPC",
+      "PSX",
+      "PR",
+      "CNX",
+      "OVV"
+    ],
+    "names": [
+      "PBF Energy Inc Class A",
+      "Par Pacific Holdings Inc",
+      "Delek US Holdings Inc Registered Shs Stock Settlement",
+      "HF Sinclair Corp",
+      "Valero Energy Corp",
+      "Marathon Petroleum Corp",
+      "Phillips 66",
+      "Permian Resources Corp Class A",
+      "CNX Resources Corp",
+      "Ovintiv Inc"
+    ],
+    "weights": [
+      0.0401355,
+      0.0352864,
+      0.032558,
+      0.030557001,
+      0.0286726,
+      0.0284146,
+      0.027537301,
+      0.025531098,
+      0.025488902,
+      0.0254826
+    ]
+  },
+  "OIH": {
+    "symbols": [
+      "SLB",
+      "BKR",
+      "FTI",
+      "HAL",
+      "TS",
+      "WFRD",
+      "NE",
+      "RIG",
+      "OII",
+      "NOV"
+    ],
+    "names": [
+      "SLB Ltd",
+      "Baker Hughes Co Class A",
+      "TechnipFMC PLC",
+      "Halliburton Co",
+      "Tenaris SA ADR",
+      "Weatherford International PLC Ordinary Shares - New",
+      "Noble Corp PLC Class A",
+      "Transocean Ltd",
+      "Oceaneering International Inc",
+      "NOV Inc"
+    ],
+    "weights": [
+      0.19783011,
+      0.126693,
+      0.0716025,
+      0.0594833,
+      0.051803198,
+      0.0436628,
+      0.0435848,
+      0.042701002,
+      0.0378266,
+      0.037045702
+    ]
+  },
+  "ICLN": {
+    "symbols": [
+      "FSLR",
+      "600900.SS",
+      "NXT",
+      "BE",
+      "ENPH",
+      "VWS.CO",
+      "EQTL3.SA",
+      "EDP.LS",
+      "PLUG",
+      "9502.T"
+    ],
+    "names": [
+      "First Solar Inc",
+      "China Yangtze Power Co Ltd Class A",
+      "Nextpower Inc Class A",
+      "Bloom Energy Corp Class A",
+      "Enphase Energy Inc",
+      "Vestas Wind Systems AS",
+      "Equatorial SA",
+      "EDP-Energias De Portugal SA",
+      "Plug Power Inc",
+      "Chubu Electric Power Co Inc"
+    ],
+    "weights": [
+      0.0805353,
+      0.0782475,
+      0.0701003,
+      0.0693184,
+      0.045915198,
+      0.0361887,
+      0.032947198,
+      0.026990399,
+      0.0266711,
+      0.0254103
+    ]
+  },
+  "AMLP": {
+    "symbols": [
+      "SUN",
+      "PAA",
+      "ET",
+      "WES",
+      "MPLX",
+      "EPD",
+      "HESM",
+      "CQP",
+      "USAC",
+      "GEL"
+    ],
+    "names": [
+      "Sunoco LP",
+      "Plains All American Pipeline LP",
+      "Energy Transfer LP",
+      "Western Midstream Partners LP",
+      "MPLX LP Partnership Units",
+      "Enterprise Products Partners LP",
+      "Hess Midstream LP Class A",
+      "Cheniere Energy Partners LP",
+      "USA Compression Partners LP",
+      "Genesis Energy LP"
+    ],
+    "weights": [
+      0.1443595,
+      0.1334558,
+      0.1323164,
+      0.1294744,
+      0.1262435,
+      0.124454804,
+      0.0908771,
+      0.0461966,
+      0.0368076,
+      0.0290378
+    ]
+  },
+  "TAN": {
+    "symbols": [
+      "FSLR",
+      "NXT",
+      "ENLT.TA",
+      "ENPH",
+      "DORL.TA",
+      "SEDG",
+      "HASI",
+      "RUN",
+      "CWEN",
+      "3800.HK"
+    ],
+    "names": [
+      "First Solar Inc",
+      "Nextpower Inc Class A",
+      "Enlight Renewable Energy Ltd",
+      "Enphase Energy Inc",
+      "Doral Group Renewable Eneryy Resources Ltd Ordinary Shares",
+      "SolarEdge Technologies Inc",
+      "HA Sustainable Infrastructure Capital Inc",
+      "Sunrun Inc",
+      "Clearway Energy Inc Class C",
+      "GCL Technology Holdings Ltd"
+    ],
+    "weights": [
+      0.0996447,
+      0.093069,
+      0.0756811,
+      0.065114595,
+      0.0464551,
+      0.0432235,
+      0.0426804,
+      0.041893903,
+      0.0353043,
+      0.0341417
+    ]
+  },
+  "URA": {
+    "symbols": [
+      "CCO.TO",
+      "NXE.TO",
+      "OKLO",
+      "UEC",
+      "KAP",
+      "LEU",
+      "PDN.AX",
+      "BHP.AX",
+      "028260.KS"
+    ],
+    "names": [
+      "Cameco Corp",
+      "NexGen Energy Ltd",
+      "Oklo Inc Class A Shares",
+      "Uranium Energy Corp",
+      "National Atomic Co Kazatomprom JSC GDR - Regulation S",
+      "Centrus Energy Corp Class A",
+      "Paladin Energy Ltd",
+      "BHP Group Ltd",
+      "Samsung C&T Corp"
+    ],
+    "weights": [
+      0.229852,
+      0.064698905,
+      0.0553023,
+      0.0527636,
+      0.0490692,
+      0.035493802,
+      0.0348935,
+      0.034315,
+      0.0339512
+    ]
+  },
+  "ITA": {
+    "symbols": [
+      "GE",
+      "RTX",
+      "BA",
+      "HWM",
+      "GD",
+      "LMT",
+      "TDG",
+      "NOC",
+      "LHX",
+      "AXON"
+    ],
+    "names": [
+      "GE Aerospace",
+      "RTX Corp",
+      "Boeing Co",
+      "Howmet Aerospace Inc",
+      "General Dynamics Corp",
+      "Lockheed Martin Corp",
+      "TransDigm Group Inc",
+      "Northrop Grumman Corp",
+      "L3Harris Technologies Inc",
+      "Axon Enterprise Inc"
+    ],
+    "weights": [
+      0.2206416,
+      0.17022529,
+      0.089956194,
+      0.047810897,
+      0.047507502,
+      0.0469063,
+      0.0437256,
+      0.0422864,
+      0.0366637,
+      0.030216401
+    ]
+  },
+  "IYT": {
+    "symbols": [
+      "UNP",
+      "UBER",
+      "CSX",
+      "UPS",
+      "UAL",
+      "DAL",
+      "NSC",
+      "FDX",
+      "ODFL",
+      "XPO"
+    ],
+    "names": [
+      "Union Pacific Corp",
+      "Uber Technologies Inc",
+      "CSX Corp",
+      "United Parcel Service Inc Class B",
+      "United Airlines Holdings Inc",
+      "Delta Air Lines Inc",
+      "Norfolk Southern Corp",
+      "FedEx Corp",
+      "Old Dominion Freight Line Inc Ordinary Shares",
+      "XPO Inc"
+    ],
+    "weights": [
+      0.1737595,
+      0.1434873,
+      0.0938219,
+      0.056342904,
+      0.0486958,
+      0.048565697,
+      0.0478863,
+      0.0424602,
+      0.039646998,
+      0.0301256
+    ]
+  },
+  "JETS": {
+    "symbols": [
+      "UAL",
+      "AAL",
+      "DAL",
+      "LUV",
+      "JBLU",
+      "SKYW",
+      "AC.TO",
+      "ALGT",
+      "ULCC",
+      "ALK"
+    ],
+    "names": [
+      "United Airlines Holdings Inc",
+      "American Airlines Group Inc",
+      "Delta Air Lines Inc",
+      "Southwest Airlines Co",
+      "JetBlue Airways Corp",
+      "SkyWest Inc",
+      "Air Canada Ordinary Shares (Voting and Variable Voting)",
+      "Allegiant Travel Co",
+      "Frontier Group Holdings Inc",
+      "Alaska Air Group Inc"
+    ],
+    "weights": [
+      0.106715895,
+      0.104579,
+      0.10399511,
+      0.0987902,
+      0.040002,
+      0.0394217,
+      0.0383981,
+      0.037686802,
+      0.0341483,
+      0.0335851
+    ]
+  },
+  "ITB": {
+    "symbols": [
+      "DHI",
+      "PHM",
+      "LEN",
+      "NVR",
+      "SHW",
+      "TOL",
+      "HD",
+      "LOW",
+      "MAS",
+      "LII"
+    ],
+    "names": [
+      "D.R. Horton Inc",
+      "PulteGroup Inc",
+      "Lennar Corp Class A",
+      "NVR Inc",
+      "Sherwin-Williams Co",
+      "Toll Brothers Inc",
+      "The Home Depot Inc",
+      "Lowe's Companies Inc",
+      "Masco Corp",
+      "Lennox International Inc"
+    ],
+    "weights": [
+      0.1640484,
+      0.104748204,
+      0.0770707,
+      0.072150305,
+      0.053344,
+      0.0529104,
+      0.0495077,
+      0.045717902,
+      0.0315493,
+      0.028814299
+    ]
+  },
+  "PAVE": {
+    "symbols": [
+      "PWR",
+      "CSX",
+      "HWM",
+      "UNP",
+      "ETN",
+      "TT",
+      "NSC",
+      "NUE",
+      "DE",
+      "ROK"
+    ],
+    "names": [
+      "Quanta Services Inc",
+      "CSX Corp",
+      "Howmet Aerospace Inc",
+      "Union Pacific Corp",
+      "Eaton Corp PLC",
+      "Trane Technologies PLC Class A",
+      "Norfolk Southern Corp",
+      "Nucor Corp",
+      "Deere & Co",
+      "Rockwell Automation Inc"
+    ],
+    "weights": [
+      0.0393999,
+      0.0389948,
+      0.035882197,
+      0.0349471,
+      0.0344222,
+      0.032286502,
+      0.0321308,
+      0.0320708,
+      0.0314175,
+      0.0312624
+    ]
+  },
+  "GDX": {
+    "symbols": [
+      "NEM",
+      "AEM.TO",
+      "ABX.TO",
+      "WPM.TO",
+      "FNV.TO",
+      "AU",
+      "K.TO",
+      "GFI",
+      "PAAS.TO",
+      "NST.AX"
+    ],
+    "names": [
+      "Newmont Corp",
+      "Agnico Eagle Mines Ltd",
+      "Barrick Mining Corp",
+      "Wheaton Precious Metals Corp",
+      "Franco-Nevada Corp",
+      "Anglogold Ashanti PLC",
+      "Kinross Gold Corp",
+      "Gold Fields Ltd ADR",
+      "Pan American Silver Corp",
+      "Northern Star Resources Ltd"
+    ],
+    "weights": [
+      0.1048845,
+      0.1018443,
+      0.0801488,
+      0.055577997,
+      0.051036302,
+      0.050416898,
+      0.0431727,
+      0.039890397,
+      0.0287215,
+      0.0281189
+    ]
+  },
+  "MOO": {
+    "symbols": [
+      "CTVA",
+      "BAYN.DE",
+      "DE",
+      "NTR.TO",
+      "ZTS",
+      "ADM",
+      "CF",
+      "6326.T",
+      "TSN",
+      "BG"
+    ],
+    "names": [
+      "Corteva Inc",
+      "Bayer AG",
+      "Deere & Co",
+      "Nutrien Ltd",
+      "Zoetis Inc Class A",
+      "Archer-Daniels-Midland Co",
+      "CF Industries Holdings Inc",
+      "Kubota Corp",
+      "Tyson Foods Inc Class A",
+      "Bunge Global SA"
+    ],
+    "weights": [
+      0.089202,
+      0.088892296,
+      0.0795774,
+      0.0656904,
+      0.052150697,
+      0.0506915,
+      0.0481386,
+      0.0478722,
+      0.0437317,
+      0.0314038
+    ]
+  },
+  "SLX": {
+    "symbols": [
+      "BHP",
+      "RIO",
+      "VALE",
+      "NUE",
+      "STLD",
+      "5401.T",
+      "MT",
+      "RIO.AX",
+      "RS",
+      "FMG.AX"
+    ],
+    "names": [
+      "BHP Group Ltd ADR",
+      "Rio Tinto PLC ADR",
+      "Vale SA ADR",
+      "Nucor Corp",
+      "Steel Dynamics Inc",
+      "Nippon Steel Corp",
+      "ArcelorMittal SA Depository Receipt",
+      "Rio Tinto Ltd",
+      "Reliance Inc",
+      "Fortescue Ltd"
+    ],
+    "weights": [
+      0.0742558,
+      0.0703452,
+      0.0695924,
+      0.0660386,
+      0.0559089,
+      0.055349797,
+      0.053800102,
+      0.047161397,
+      0.0453064,
+      0.0433038
+    ]
+  },
+  "LIT": {
+    "symbols": [
+      "RIO",
+      "002371.SZ",
+      "6752.T",
+      "6762.T",
+      "ALB",
+      "300750.SZ",
+      "006400.KS",
+      "01211",
+      "TSLA",
+      "373220.KS"
+    ],
+    "names": [
+      "Rio Tinto PLC ADR",
+      "NAURA Technology Group Co Ltd Class A",
+      "Panasonic Holdings Corp",
+      "TDK Corp",
+      "Albemarle Corp",
+      "Contemporary Amperex Technology Co Ltd Class A",
+      "Samsung SDI Co Ltd",
+      "BYD Co Ltd Class H",
+      "Tesla Inc",
+      "LG Energy Solution Ltd"
+    ],
+    "weights": [
+      0.2287971,
+      0.0688667,
+      0.0673806,
+      0.0558056,
+      0.0453093,
+      0.0414287,
+      0.0404251,
+      0.039081,
+      0.0376906,
+      0.0355538
+    ]
+  },
+  "COPX": {
+    "symbols": [
+      "BHP.AX",
+      "TECK-B.TO",
+      "HBM.TO",
+      "SCCO",
+      "FM.TO",
+      "GLEN.L",
+      "ANTO.L",
+      "KGH.WA",
+      "FCX",
+      "02899"
+    ],
+    "names": [
+      "BHP Group Ltd",
+      "Teck Resources Ltd Class B (Sub Voting)",
+      "Hudbay Minerals Inc",
+      "Southern Copper Corp",
+      "First Quantum Minerals Ltd",
+      "Glencore PLC",
+      "Antofagasta PLC",
+      "KGHM Polska Miedz SA",
+      "Freeport-McMoRan Inc",
+      "Zijin Mining Group Co Ltd Class H"
+    ],
+    "weights": [
+      0.0547744,
+      0.0539427,
+      0.0526088,
+      0.0508318,
+      0.050454002,
+      0.0501661,
+      0.050050303,
+      0.047648102,
+      0.047582503,
+      0.045373403
+    ]
+  },
+  "REMX": {
+    "symbols": [
+      "ALB",
+      "PLS.AX",
+      "600111.SS",
+      "LYC.AX",
+      "MP",
+      "SQM",
+      "601958.SS",
+      "600549.SS",
+      "ALM",
+      "01772"
+    ],
+    "names": [
+      "Albemarle Corp",
+      "PLS Group Ltd",
+      "China Northern Rare Earth (Group) High-Tech Co Ltd Class A",
+      "Lynas Rare Earths Ltd",
+      "MP Materials Corp Ordinary Shares - Class A",
+      "Sociedad Quimica Y Minera De Chile SA ADR",
+      "Jinduicheng Molybdenum Co Ltd Class A",
+      "Xiamen Tungsten Co Ltd Class A",
+      "Almonty Industries Inc",
+      "Ganfeng Lithium Group Co Ltd"
+    ],
+    "weights": [
+      0.080591895,
+      0.0752657,
+      0.0742268,
+      0.0681715,
+      0.0588971,
+      0.058043,
+      0.0561414,
+      0.049837198,
+      0.043227702,
+      0.0388823
+    ]
+  },
+  "XRT": {
+    "symbols": [
+      "GRPN",
+      "REAL",
+      "LAD",
+      "EYE",
+      "RVLV",
+      "PAG",
+      "KSS",
+      "VSXY",
+      "ETSY",
+      "KMX"
+    ],
+    "names": [
+      "Groupon Inc",
+      "The RealReal Inc",
+      "Lithia Motors Inc Class A",
+      "National Vision Holdings Inc",
+      "Revolve Group Inc Class A",
+      "Penske Automotive Group Inc",
+      "Kohl's Corp",
+      "Victoria's Secret & Co",
+      "Etsy Inc",
+      "CarMax Inc"
+    ],
+    "weights": [
+      0.019895,
+      0.017498601,
+      0.0166941,
+      0.016548099,
+      0.0162875,
+      0.016100101,
+      0.0159187,
+      0.015768599,
+      0.015688,
+      0.0155852
+    ]
+  },
+  "PEJ": {
+    "symbols": [
+      "EXPE",
+      "VIK",
+      "ABNB",
+      "SYY",
+      "SBUX",
+      "MAR",
+      "HLT",
+      "LVS",
+      "TRIP",
+      "LIND"
+    ],
+    "names": [
+      "Expedia Group Inc",
+      "Viking Holdings Ltd",
+      "Airbnb Inc Ordinary Shares - Class A",
+      "Sysco Corp",
+      "Starbucks Corp",
+      "Marriott International Inc Class A",
+      "Hilton Worldwide Holdings Inc",
+      "Las Vegas Sands Corp",
+      "Tripadvisor Inc",
+      "Lindblad Expeditions Holdings Inc"
+    ],
+    "weights": [
+      0.0609528,
+      0.0548354,
+      0.052656297,
+      0.0521793,
+      0.047845703,
+      0.0459937,
+      0.045636903,
+      0.0453064,
+      0.0354801,
+      0.034809202
+    ]
+  },
+  "AWAY": {
+    "symbols": [
+      "EXPE",
+      "WEB.AX",
+      "BKNG",
+      "OTB.L",
+      "ABNB",
+      "MMYT",
+      "NAVN",
+      "TRIP",
+      "FLT.AX",
+      "EDR.MC"
+    ],
+    "names": [
+      "Expedia Group Inc",
+      "Web Travel Group Ltd",
+      "Booking Holdings Inc",
+      "On The Beach Group PLC",
+      "Airbnb Inc Ordinary Shares - Class A",
+      "MakeMyTrip Ltd",
+      "Navan Inc Ordinary Shares - Class A",
+      "Tripadvisor Inc",
+      "Flight Centre Travel Group Ltd",
+      "Edreams Odigeo SA Ordinary Shares"
+    ],
+    "weights": [
+      0.0509834,
+      0.048791498,
+      0.0452591,
+      0.044902902,
+      0.0445274,
+      0.0440369,
+      0.0417695,
+      0.041402403,
+      0.040960204,
+      0.0408744
+    ]
+  },
+  "IBUY": {
+    "symbols": [
+      "W",
+      "TRIP",
+      "ETSY",
+      "RVLV",
+      "PYPL",
+      "PTON",
+      "EXPE",
+      "SPOT",
+      "MSM",
+      "DASH"
+    ],
+    "names": [
+      "Wayfair Inc Class A",
+      "Tripadvisor Inc",
+      "Etsy Inc",
+      "Revolve Group Inc Class A",
+      "PayPal Holdings Inc",
+      "Peloton Interactive Inc",
+      "Expedia Group Inc",
+      "Spotify Technology SA",
+      "MSC Industrial Direct Co Inc Class A",
+      "DoorDash Inc Ordinary Shares - Class A"
+    ],
+    "weights": [
+      0.029426701,
+      0.0289836,
+      0.0287619,
+      0.0284503,
+      0.0282845,
+      0.028110499,
+      0.0273441,
+      0.0269128,
+      0.026886402,
+      0.026721101
+    ]
+  },
+  "BETZ": {
+    "symbols": [
+      "FLUT",
+      "EVO.ST",
+      "ALWN.AT",
+      "DKNG",
+      "SGHC",
+      "RSI",
+      "LTMC.MI",
+      "LNW",
+      "ENT.L",
+      "SRAD"
+    ],
+    "names": [
+      "Flutter Entertainment PLC",
+      "Evolution AB",
+      "Allwyn AG",
+      "DraftKings Inc Ordinary Shares - Class A",
+      "Super Group (SGHC) Ltd",
+      "Rush Street Interactive Inc Ordinary Shares - Class A",
+      "Lottomatica Group SpA",
+      "Light & Wonder Inc Chess Depository Interest",
+      "Entain PLC",
+      "Sportradar Group AG Class A"
+    ],
+    "weights": [
+      0.0755242,
+      0.0714485,
+      0.0637774,
+      0.0600781,
+      0.055995896,
+      0.0514385,
+      0.050757598,
+      0.0483299,
+      0.0479369,
+      0.0474253
+    ]
+  },
+  "PHO": {
+    "symbols": [
+      "ROP",
+      "ECL",
+      "FERG",
+      "WAT",
+      "IDXX",
+      "VLTO",
+      "AWK",
+      "XYL",
+      "A",
+      "IEX"
+    ],
+    "names": [
+      "Roper Technologies Inc",
+      "Ecolab Inc",
+      "Ferguson Enterprises Inc",
+      "Waters Corp",
+      "IDEXX Laboratories Inc",
+      "Veralto Corp",
+      "American Water Works Co Inc",
+      "Xylem Inc",
+      "Agilent Technologies Inc",
+      "IDEX Corp"
+    ],
+    "weights": [
+      0.0911224,
+      0.0820712,
+      0.068865,
+      0.0673157,
+      0.064599,
+      0.0433334,
+      0.0411863,
+      0.040407,
+      0.0386307,
+      0.0366751
+    ]
+  }
+}
