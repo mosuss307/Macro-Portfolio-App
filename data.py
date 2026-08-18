@@ -35,32 +35,22 @@ def fetch_benchmark_prices(period="6mo"):
 
 def get_etf_holdings(ticker: str):
     """
-    Fetch top holdings for an ETF via Yahoo Finance quoteSummary API with crumb auth.
-    Uses curl_cffi to impersonate Chrome's TLS fingerprint, which Yahoo Finance requires.
-    Regular requests are blocked on cloud servers (Streamlit Cloud / AWS).
+    Fetch top holdings for an ETF via Yahoo Finance quoteSummary API.
+    Reuses yfinance's own internal session (which already handles Chrome TLS impersonation
+    and crumb auth), so this works on Streamlit Cloud just like price data does.
     Returns a DataFrame with columns [Name, Holding Percent] where Holding Percent is a
     raw float (e.g. 0.1859 = 18.59%), or None if unavailable.
     """
     try:
-        from curl_cffi import requests as cffi_requests
+        from yfinance.data import YfData
 
-        # Impersonate Chrome so Yahoo Finance accepts the connection
-        session = cffi_requests.Session(impersonate="chrome")
+        # Borrow yfinance's already-authenticated curl_cffi session
+        yfdata = YfData()
+        crumb, _ = yfdata._get_cookie_and_crumb()
+        session = yfdata._session
 
-        # Get the crumb token Yahoo Finance requires on every API call
-        crumb_resp = session.get(
-            "https://query1.finance.yahoo.com/v1/test/getcrumb", timeout=10
-        )
-        if crumb_resp.status_code != 200:
-            return None
-        crumb = crumb_resp.text.strip()
-
-        # Fetch holdings via the quoteSummary API
-        url = (
-            f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{ticker}"
-            f"?modules=topHoldings&crumb={crumb}"
-        )
-        resp = session.get(url, timeout=10)
+        url = f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{ticker}"
+        resp = session.get(url, params={"modules": "topHoldings", "crumb": crumb}, timeout=15)
         if resp.status_code != 200:
             return None
 

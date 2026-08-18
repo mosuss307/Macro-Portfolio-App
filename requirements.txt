@@ -3,4 +3,3 @@ yfinance==1.3.0
 pandas
 plotly
 requests
-curl_cffi
