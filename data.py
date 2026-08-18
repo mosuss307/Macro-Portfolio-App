@@ -35,25 +35,54 @@ def fetch_benchmark_prices(period="6mo"):
 
 def get_etf_holdings(ticker: str):
     """
-    Fetch top holdings for an ETF. Returns a DataFrame or None if unavailable.
-    Uses a browser-like session to avoid Yahoo Finance blocking cloud server IPs.
+    Fetch top holdings for an ETF via Yahoo Finance quoteSummary API with crumb auth.
+    Uses curl_cffi to impersonate Chrome's TLS fingerprint, which Yahoo Finance requires.
+    Regular requests are blocked on cloud servers (Streamlit Cloud / AWS).
+    Returns a DataFrame with columns [Name, Holding Percent] where Holding Percent is a
+    raw float (e.g. 0.1859 = 18.59%), or None if unavailable.
     """
-    import requests
-    session = requests.Session()
-    session.headers.update({
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/125.0.0.0 Safari/537.36"
-        ),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5",
-    })
     try:
-        t = yf.Ticker(ticker, session=session)
-        holdings = t.funds_data.top_holdings
-        if holdings is not None and not holdings.empty:
-            return holdings
+        from curl_cffi import requests as cffi_requests
+
+        # Impersonate Chrome so Yahoo Finance accepts the connection
+        session = cffi_requests.Session(impersonate="chrome")
+
+        # Get the crumb token Yahoo Finance requires on every API call
+        crumb_resp = session.get(
+            "https://query1.finance.yahoo.com/v1/test/getcrumb", timeout=10
+        )
+        if crumb_resp.status_code != 200:
+            return None
+        crumb = crumb_resp.text.strip()
+
+        # Fetch holdings via the quoteSummary API
+        url = (
+            f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{ticker}"
+            f"?modules=topHoldings&crumb={crumb}"
+        )
+        resp = session.get(url, timeout=10)
+        if resp.status_code != 200:
+            return None
+
+        result = resp.json().get("quoteSummary", {}).get("result") or []
+        if not result:
+            return None
+
+        raw_holdings = result[0].get("topHoldings", {}).get("holdings", [])
+        if not raw_holdings:
+            return None
+
+        rows = []
+        for h in raw_holdings:
+            name = h.get("holdingName", "")
+            pct  = h.get("holdingPercent", {})
+            # holdingPercent arrives as {"raw": 0.1859, "fmt": "18.59%"}
+            pct_raw = pct.get("raw", 0) if isinstance(pct, dict) else float(pct)
+            rows.append({"Name": name, "Holding Percent": pct_raw})
+
+        df = pd.DataFrame(rows, index=[h.get("symbol", "") for h in raw_holdings])
+        df.index.name = "Symbol"
+        return df if not df.empty else None
+
     except Exception:
         return None
-    return None
