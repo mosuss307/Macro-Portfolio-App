@@ -36,25 +36,21 @@ def fetch_benchmark_prices(period="6mo"):
 def get_etf_holdings(ticker: str):
     """
     Fetch top holdings for an ETF via Yahoo Finance quoteSummary API.
-    Reuses yfinance's own internal session (which already handles Chrome TLS impersonation
-    and crumb auth), so this works on Streamlit Cloud just like price data does.
-    Returns a DataFrame with columns [Name, Holding Percent] where Holding Percent is a
-    raw float (e.g. 0.1859 = 18.59%), or None if unavailable.
+    Uses yfinance's own get_raw_json() which handles Chrome TLS impersonation,
+    crumb auth, retries, and cookie strategy — identical to how yfinance fetches
+    price data, so it works on Streamlit Cloud just as price data does.
+    Returns a DataFrame with columns [Name, Holding Percent] where Holding Percent
+    is a raw float (e.g. 0.1859 = 18.59%), or None if unavailable.
     """
     try:
         from yfinance.data import YfData
 
-        # Borrow yfinance's already-authenticated curl_cffi session
         yfdata = YfData()
-        crumb, _ = yfdata._get_cookie_and_crumb()
-        session = yfdata._session
-
         url = f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{ticker}"
-        resp = session.get(url, params={"modules": "topHoldings", "crumb": crumb}, timeout=15)
-        if resp.status_code != 200:
-            return None
+        # get_raw_json handles crumb injection, retries, and cookie strategy automatically
+        data = yfdata.get_raw_json(url, params={"modules": "topHoldings"})
 
-        result = resp.json().get("quoteSummary", {}).get("result") or []
+        result = data.get("quoteSummary", {}).get("result") or []
         if not result:
             return None
 
@@ -66,7 +62,6 @@ def get_etf_holdings(ticker: str):
         for h in raw_holdings:
             name = h.get("holdingName", "")
             pct  = h.get("holdingPercent", {})
-            # holdingPercent arrives as {"raw": 0.1859, "fmt": "18.59%"}
             pct_raw = pct.get("raw", 0) if isinstance(pct, dict) else float(pct)
             rows.append({"Name": name, "Holding Percent": pct_raw})
 
