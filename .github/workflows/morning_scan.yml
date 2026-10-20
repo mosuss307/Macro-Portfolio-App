@@ -1,0 +1,31 @@
+name: Morning Stock Scan
+
+on:
+  schedule:
+    # 10:00 AM Eastern Daylight Time = 14:00 UTC
+    # Runs Monday–Friday only
+    - cron: '0 14 * * 1-5'
+  workflow_dispatch:
+    # Allows you to trigger the scan manually from GitHub at any time
+
+jobs:
+  run-screener:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r screener/requirements.txt
+
+      - name: Run morning scan and send email
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_APP_PASSWORD: ${{ secrets.SENDER_APP_PASSWORD }}
+        run: python screener/rs_screener.py
