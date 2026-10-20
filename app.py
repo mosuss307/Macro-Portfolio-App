@@ -1516,33 +1516,68 @@ if page == "📊  ETF Scan":
             .format({"6M Ret %": "{:+.1f}%", "3M Ret %": "{:+.1f}%", "1M Ret %": "{:+.1f}%"})
         )
 
-        st.dataframe(styled, use_container_width=True, hide_index=True, height=700)
+        # ── Holdings panel state ──────────────────────────────────────
+        if "holdings_panel_open" not in st.session_state:
+            st.session_state["holdings_panel_open"] = False
+        panel_open = st.session_state["holdings_panel_open"]
 
-        # ── Holdings expanders ────────────────────────────────────
-        st.markdown("---")
-        st.markdown(
-            '<div style="font-family:Georgia,serif; font-size:1.0rem; font-weight:700; '
-            'color:#D4C898; margin-bottom:6px">Holdings</div>',
-            unsafe_allow_html=True,
-        )
-        for r in sorted(results, key=lambda x: x["Ticker"]):
-            ticker = r["Ticker"]
-            label  = f"{ticker} — {r['Name']}  ·  {r['Rating']}  ·  RS {r['RS Score']}/7"
-            with st.expander(label):
-                holdings = get_etf_holdings(ticker)
-                if holdings is not None and not holdings.empty:
-                    df_h = holdings.copy()
-                    weight_col = next(
-                        (c for c in df_h.columns if "percent" in c.lower() or "weight" in c.lower()), None
-                    )
-                    if weight_col:
-                        df_h = df_h[[weight_col]].copy()
-                        df_h.columns = ["Weight"]
-                        df_h["Weight"] = df_h["Weight"].apply(lambda x: f"{float(x)*100:.2f}%")
-                    df_h.index.name = "Holding"
-                    st.dataframe(df_h, use_container_width=True, hide_index=False)
+        # ── Toggle button row — always at top-right above the table ──
+        _spacer, col_toggle = st.columns([9, 1])
+        with col_toggle:
+            toggle_label = "◀ Holdings" if not panel_open else "Holdings ▶"
+            if st.button(toggle_label, key="holdings_toggle", use_container_width=True):
+                st.session_state["holdings_panel_open"] = not panel_open
+                st.rerun()
+
+        # ── Table + optional panel side-by-side ──────────────────────
+        if panel_open:
+            col_tbl, col_hold = st.columns([7, 3])
+        else:
+            col_tbl = st.container()
+
+        with col_tbl:
+            st.dataframe(styled, use_container_width=True, hide_index=True, height=700)
+
+        if panel_open:
+            with col_hold:
+                st.markdown(
+                    '<div class="eyebrow" style="margin-top:2px">Holdings</div>',
+                    unsafe_allow_html=True,
+                )
+                hold_options = [""] + [r["Ticker"] for r in sorted(results, key=lambda x: x["Ticker"])]
+                hold_pick = st.selectbox(
+                    "Select ETF",
+                    hold_options,
+                    format_func=lambda t: "— pick an ETF —" if t == "" else f"{t}  ·  {ETF_UNIVERSE[t][0]}",
+                    key="hold_side_panel",
+                    label_visibility="collapsed",
+                )
+                if hold_pick:
+                    with st.spinner(f"Loading {hold_pick}…"):
+                        h_data = get_etf_holdings(hold_pick)
+                    if h_data is not None and not h_data.empty:
+                        df_h = h_data.copy()
+                        weight_col = next(
+                            (c for c in df_h.columns if "percent" in c.lower() or "weight" in c.lower()), None
+                        )
+                        if weight_col:
+                            df_h = df_h[[weight_col]].copy()
+                            df_h.columns = ["Weight"]
+                            df_h["Weight"] = df_h["Weight"].apply(lambda x: f"{float(x)*100:.2f}%")
+                        df_h.index.name = "Holding"
+                        r_info = next((r for r in results if r["Ticker"] == hold_pick), {})
+                        st.markdown(
+                            f'<div style="font-size:0.72rem; color:#C49A2A; font-weight:700; '
+                            f'letter-spacing:.06em; margin-bottom:4px">'
+                            f'{hold_pick} &nbsp;·&nbsp; RS {r_info.get("RS Score","—")}/7 &nbsp;·&nbsp; '
+                            f'{r_info.get("Rating","")}</div>',
+                            unsafe_allow_html=True,
+                        )
+                        st.dataframe(df_h, use_container_width=True, height=620)
+                    else:
+                        st.caption(f"No holdings data available for {hold_pick}.")
                 else:
-                    st.caption("Holdings data not available for this ETF.")
+                    st.caption("Select an ETF to view holdings.")
 
         # ── Category breakdown ────────────────────────────────────
         st.markdown("---")
