@@ -1536,7 +1536,21 @@ if page == "📊  ETF Scan":
             col_tbl = st.container()
 
         with col_tbl:
-            st.dataframe(styled, use_container_width=True, hide_index=True, height=700)
+            tbl_event = st.dataframe(
+                styled,
+                use_container_width=True,
+                hide_index=True,
+                height=700,
+                selection_mode="single-row",
+                on_select="rerun",
+            )
+            # When a row is clicked, auto-load that ticker in the holdings panel
+            if tbl_event.selection.rows:
+                clicked_ticker = styled.data.iloc[tbl_event.selection.rows[0]]["Ticker"]
+                if st.session_state.get("hold_side_panel") != clicked_ticker:
+                    st.session_state["hold_side_panel"] = clicked_ticker
+                    st.session_state["holdings_panel_open"] = True
+                    st.rerun()
 
         if panel_open:
             with col_hold:
